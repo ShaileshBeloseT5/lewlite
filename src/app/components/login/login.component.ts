@@ -1,8 +1,12 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient,HttpHeaders , HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { v4 as uuid4} from 'uuid';
+import { HttpInterceptorService } from '../../http-interceptor.service';
+
+import { SERVER_API_URL } from '../../app.config';
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -20,14 +24,30 @@ export class LoginComponent {
   }
 
   onLogin() {
+
     debugger;
     console.log;
-    this.http.post('http://172.17.2.113:8081/LEWServiceV2/api/userManagement', this.loginObj).subscribe((res: any) => {
-      if (res.Response == 'true') {
-        alert("Login Success!");
-      }
-      else { alert(res.Response); }
-    })
+   
+    this.http.post(SERVER_API_URL+'/userManagement', this.loginObj).subscribe({
+  next: (res: any) => {
+    console.log('Response:', res);
+    if (res.response === 'true') {
+      alert("Login Success!");
+    } else { 
+      alert("Wrong credentials please try again!"); 
+    }
+  },
+  error: (error) => {
+    console.error('An error occurred:', error);
+    // Handle error appropriately (e.g., show error message to the user)
+  }
+});
+const headers = new HttpHeaders()
+  .set('Content-Type', 'application/json')
+  .set('X-Custom-Header', 'custom-value');
+    
+
+
 
   }
 }
@@ -35,14 +55,12 @@ export class LoginComponent {
 export class Login {
   UserToken: string;
   Username: string;
-  Password: string;
-  ErrorMessage: string;
+  Password: string;  
   RequestType:string;
 
   constructor() {
     this.Username = '';
-    this.Password = '';
-    this.ErrorMessage = '';
+    this.Password = '';   
     this.RequestType='Login';
     this.UserToken=uuid4();
   }
