@@ -24,12 +24,12 @@ export class LoginComponent {
       next: (res: any) => {
         console.log('Response:', res);
         if (res.response === 'true') {
-          alert("Login Success!");
+        
           localStorage.setItem('userName', res.UserDetailsList[0].Username);
           this.router.navigateByUrl('/dashboard');
 
         } else {
-          alert("Wrong credentials please try again!");
+          
         }
       },
       error: (error: any) => {
