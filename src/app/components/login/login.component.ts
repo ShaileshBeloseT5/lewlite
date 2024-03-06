@@ -1,16 +1,12 @@
-import { HttpClient,HttpHeaders , HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { v4 as uuid4} from 'uuid';
-import { HttpInterceptorService } from '../../http-interceptor.service';
-
-import { SERVER_API_URL } from '../../app.config';
-
+import { v4 as uuid4 } from 'uuid';
+import { LoginService } from '../../services/login.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, HttpClientModule],
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -18,50 +14,42 @@ import { SERVER_API_URL } from '../../app.config';
 export class LoginComponent {
 
   loginObj: Login;
-
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private loginService: LoginService, private router: Router) {
     this.loginObj = new Login();
-  }
+  }  
 
-  onLogin() {
+  onLogin(): void {
+    debugger;    
+     this.loginService.login(this.loginObj).subscribe({
+      next: (res: any) => {
+        console.log('Response:', res);
+        if (res.response === 'true') {
+          alert("Login Success!");
+          localStorage.setItem('userName', res.UserDetailsList[0].Username);
+          this.router.navigateByUrl('/dashboard');
 
-    debugger;
-    console.log;
-   
-    this.http.post(SERVER_API_URL+'/userManagement', this.loginObj).subscribe({
-  next: (res: any) => {
-    console.log('Response:', res);
-    if (res.response === 'true') {
-      alert("Login Success!");
-    } else { 
-      alert("Wrong credentials please try again!"); 
-    }
-  },
-  error: (error) => {
-    console.error('An error occurred:', error);
-    // Handle error appropriately (e.g., show error message to the user)
-  }
-});
-const headers = new HttpHeaders()
-  .set('Content-Type', 'application/json')
-  .set('X-Custom-Header', 'custom-value');
-    
-
-
-
+        } else {
+          alert("Wrong credentials please try again!");
+        }
+      },
+      error: (error: any) => {
+        console.error('An error occurred:', error);
+        // Handle error appropriately (e.g., show error message to the user)
+      }
+    }); 
   }
 }
 
 export class Login {
   UserToken: string;
   Username: string;
-  Password: string;  
-  RequestType:string;
+  Password: string;
+  RequestType: string;
 
   constructor() {
     this.Username = '';
-    this.Password = '';   
-    this.RequestType='Login';
-    this.UserToken=uuid4();
+    this.Password = '';
+    this.RequestType = 'Login';
+    this.UserToken = uuid4();
   }
 }

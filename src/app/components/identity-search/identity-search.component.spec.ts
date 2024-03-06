@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdenticationComponent } from './identication.component';
+import { IdentitySearchComponent } from './identity-search.component';
 
-describe('IdenticationComponent', () => {
-  let component: IdenticationComponent;
-  let fixture: ComponentFixture<IdenticationComponent>;
+describe('IdentitySearchComponent', () => {
+  let component: IdentitySearchComponent;
+  let fixture: ComponentFixture<IdentitySearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IdenticationComponent]
+      imports: [IdentitySearchComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(IdenticationComponent);
+    fixture = TestBed.createComponent(IdentitySearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
