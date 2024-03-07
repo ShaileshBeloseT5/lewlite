@@ -26,7 +26,7 @@ export class LoginComponent {
         if (res.response === 'true') {
         
           localStorage.setItem('userName', res.UserDetailsList[0].Username);
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/identity-search');
 
         } else {
           

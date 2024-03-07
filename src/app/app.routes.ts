@@ -10,10 +10,7 @@ import { UserManagementComponent } from './components/user-management/user-manag
 import { LayoutComponent } from './components/layout/layout.component';
 
 export const routes: Routes = [
-    {
-        path: '', redirectTo: 'login', pathMatch: 'full'
-    },
-    {
+        {
 
         path: '',
         component: LoginComponent
@@ -31,6 +28,26 @@ export const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },    
+    {
+        path: 'identity-search',
+        component: IdentitySearchComponent
+    },
+    {
+        path: 'finger-search',
+        component: FingerSearchComponent
+    },
+    {
+        path: 'ak23',
+        component: Ak23CardComponent
+    },
+    {
+        path: 'user-management',
+        component: UserManagementComponent
+    },
+    {
+        path: 'reports',
+        component: ReportsComponent
     },
     {
         path: '**',
