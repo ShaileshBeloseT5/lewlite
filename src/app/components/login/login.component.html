@@ -9,11 +9,11 @@
 								LOGIN
 							</h1>
 							<form>
-								<input class="form-control" type="text" placeholder="Username">
-								<input class="form-control" type="password" placeholder="Password">
+								<input class="form-control" type="text" placeholder="Username" [(ngModel)]="loginObj.Username" name="Username" required="true">
+								<input class="form-control" type="password" placeholder="Password" [(ngModel)]="loginObj.Password" name="Password" required="true">
 								<button type="button" class="btn btn-link px-0">Forgot your password</button>
 							</form>
-							<button class="btn btn-login mt-3">Login</button>
+							<button class="btn btn-login mt-3" (click)="onLogin()">Login</button>
 						</div>
 					</div>
 				</div>
