@@ -1,124 +1,88 @@
-.parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1f293a;
-    /* background-image: url(./bg.jpg); */
-}
-.container {
-    position: relative;
-    width: 256px;
-    height: 256px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container span {
-    position: absolute;
-    left: 0;
-    width: 32px;
-    height: 6px;
-    background: #2c4766;
-    border-radius: 8px;
-    transform-origin: 128px;
-    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
-    animation: animateBlink 3s linear infinite;
-    animation-delay: calc(var(--i) * (3s / 50));
-}
-@keyframes animateBlink {
-    0% {
-        background: #0ef;
+    body.login{
+    /*	background-image: linear-gradient(111.26deg, #c9ead9 98.85%, #c6e6e4 188.33%, #d2d1e2 200%);*/
+    background-image: url('../../../assets/images/background-img.PNG');
+    height: 100vh;
     }
-    25% {
-        background: #2c4766;
+    .h-100vh{
+        height: 100%;
     }
-}
-.login-box {
-    position: absolute;
-    width: 400px;
-}
-.login-box form {
-    width: 100%;
-    padding: 0 50px;
-}
-h2 {
-    font-size: 2em;
-    color: #0ef;
-    text-align: center;
-}
-.input-box {
-    position: relative;
-    margin: 25px 0;
-}
-.input-box input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: 2px solid #2c4766;
-    outline: none;
-    border-radius: 40px;
-    font-size: 1em;
-    color: #fff;
-    padding: 0 20px;
-    transition: .5s ease;
-}
-.input-box input:focus,
-.input-box input:valid {
-    border-color: #0ef;
-}
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #fff;
-    pointer-events: none;
-    transition: .5s ease;
-}
-.input-box input:focus~label,
-.input-box input:valid~label {
-    top: 1px;
-    font-size: .8em;
-    background: #1f293a;
-    padding: 0 6px;
-    color: #0ef;
-}
-.forgot-pass {
-    margin: -15px 0 10px;
-    text-align: center;
-}
-.forgot-pass a {
-    font-size: .85em;
-    color: #fff;
-    text-decoration: none;
-}
-.forgot-pass a:hover {
-    text-decoration: underline;
-}
-.btn {
-    width: 100%;
-    height: 45px;
-    background: #0ef;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #1f293a;
-    font-weight: 600;
-}
-.signup-link {
-    margin: 20px 0 10px;
-    text-align: center;
-}
-.signup-link a {
-    font-size: 1em;
-    color: #0ef;
-    text-decoration: none;
-    font-weight: 600;
-}
-.signup-link a:hover {
-    text-decoration: underline;
-}
+
+    .home-top-background{
+        background: linear-gradient(132.97deg, #ffffffeb 39.74%, #cbcbcbf0 77.17%);
+    }
+    /*.home-mid-background{
+        background: linear-gradient(180deg, #c9ead9 6.18%, rgba(255, 218, 225, 0.75) 47.03%, #c9ead9 83.14%);
+    }*/
+    
+    
+    .form-outer {
+        width: 400px;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 12px 12px 33px #00000033;
+    }
+    .form-outer input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid gray;
+        border-radius: 0;
+        padding: 8px 4px;
+        margin-bottom: 10px;
+    }
+    .btn-login{
+        position: relative;
+        background-color: #d21d08;
+        color: white;
+        text-transform: uppercase;
+        font-size: 17px;
+        border: 2px solid #272db2;
+        border-radius: 0;
+        width: 100%;
+    }
+    .btn-login:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 20px solid #272db2;
+        border-bottom: 25px solid transparent;
+        transform: rotate(90deg);
+        top: -3px;
+        right: 2px;
+    }
+    .btn-login:hover{
+            background-color: #b12919;
+        color: white;	
+    }
+    .form-outer .btn-link{
+        text-decoration: none;
+        color: #0c6070;
+    }
+    .dropdown-language{
+        font-size: 19px;
+        border: 1px solid black;
+        border-radius: 22px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: black;
+        background: transparent;
+        margin: 0 5px;
+    }
+    .dropdown-language:hover{
+        cursor: pointer;
+        background-color: white;
+        border-color: white;
+    }
+    .dropdown-menu {
+        box-shadow: 3px 6px 22px #80808063;
+        border: none;
+    }
+   
+
+    @media only screen and (max-width: 768px) {
+        .form-outer {
+            width: 100%;
+        }
+    }
