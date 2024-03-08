@@ -1,0 +1,44 @@
+.navbar-brand{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.li-logout{
+    background: #ebebeb;
+    border-radius: 22px;
+    margin-left: 20px;
+    border: 2px solid #cfcfcf;
+}
+.li-logout a{
+    color: #d77575;
+}
+.form-title{
+    background: #f0f0f0;
+    padding: 6px;
+    border-radius: 3px;
+    color: gray;
+}
+.inside-title{
+    font-weight: bold;
+}
+nav.navbar li.nav-item {
+    font-weight: bold;
+    font-size: 14px;
+}
+.prj-name { 
+    font-size: 37px;
+    font-family: fantasy;
+    font-weight: bold;
+    color: #f00307;
+    letter-spacing: 2px;
+}
+
+.ver-name {
+    background: #747474;
+    color: white;
+    padding: 1px 11px;
+    border-radius: 22px;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 13px;
+}
