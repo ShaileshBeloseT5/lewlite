@@ -1,31 +1,31 @@
-.navbar-brand{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+.FPsearch_inputs input {
+    border: 1px solid gray;
+    margin-bottom: 6px;
 }
-.li-logout{
-    background: #ebebeb;
-    border-radius: 22px;
-    margin-left: 20px;
-    border: 2px solid #cfcfcf;
+.FP {
+    font-size: small;
+    font-weight: 800;
 }
-.li-logout a{
-    color: #d77575;
+.FP_body {
+    background-color: wheat;
 }
-.form-title{
-    background: #f0f0f0;
-    padding: 6px;
-    border-radius: 3px;
-    color: gray;
+.Fprints span {
+  display: inline-flex;  
 }
-.inside-title{
-    font-weight: bold;
+.Fprints .card-body {
+    background-color: lightgreen;
 }
-nav.navbar li.nav-item {
-    font-weight: bold;
-    font-size: 14px;
+.Fprints .card {
+    margin-right: 20px;
 }
-.prj-name { 
+
+.FPname {
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #b12919;
+    color: white;
+}
+
     font-size: 37px;
     font-family: fantasy;
     font-weight: bold;
