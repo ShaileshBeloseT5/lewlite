@@ -9,10 +9,10 @@
                             <div class="mt-5 mb-2">
                                 <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
 									<li class="nav-item" role="presentation">
-										<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search By NIK</button>
+										<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" (click)="onActivatedTab('NIK')">Search By NIK</button>
 									</li>
 									<li class="nav-item" role="presentation">
-										<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Search By Name</button>
+										<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="onActivatedTab('NAME')">Search By Name</button>
 									</li>
 								</ul>
 
@@ -20,43 +20,48 @@
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
 										<div class="row">
 											<div class="col-4">
-												<label class="col-form-label">NIK Number</label>
-												<input class="form-control" type="text">
+												<label class="col-form-label">NIK Number 3173054808830011</label>
+												<input class="form-control" type="text" id="txtNIK" [(ngModel)]="nikNumber">
 											</div>	
 											<div class="col-12 text-center mt-2">
-												<button class="btn btn-submit px-4">Search</button>
+												<button class="btn btn-submit px-4" (click)="onNIKSearch(activeTab)">Search By NIK</button>
 											</div>	
 
-											<div class="form-content mt-3">
+																					  
+
+											<div class="form-content mt-3" *ngIf="condition"> 
 												<div class="row">
 													<div class="col-lg-4 col-12">
 														<div class="card border-3 border-primary">
 															<div class="card-header text-center">
-																<img src="../../../assets/images/person-icon.png" width="140px" class="UserImg">
+																<img [src]="imageData" width="140px" class="UserImg" alt="User Image">
 															</div>
+
+
+
 															<div class="card-body row">
 																<div class="col-lg-6 col-12 UserDetails">
-																	<div class="UID">Name: John Doe</div>
+																	<div class="UID">Name: {{ demogs?.Name }}</div>
 																	<ul>
-																		<li>Date of Birth:01/01/1976</li>
-																		<li>Maritial Status: Marrid</li>
-																		<li>Work: Freelance</li>
+																		<li>Date of Birth:{{ demogs?.DOB }}</li>
+																		<li>Maritial Status: {{ demogs?.Statusperkawinan }}</li>
+																		<li>Work: {{ demogs?.Perkawinan}}</li>
 																	</ul>
 																</div>
 																<div class="col-lg-6 col-12 UserDetails">
-																	<div class="UID">VIN: 1234567898766</div>
+																	<div class="UID">NIK: {{ demogs?.NIK }}</div>
 																	<ul>
-																		<li>Gender: Male</li>
-																		<li>NoKK: 1234567898766</li>
+																		<li>Gender: {{ demogs?.Gender }}</li>
+																		<li>NoKK: {{demogs?.NIK }}</li>
 																	</ul>
 																</div>
 																<div class="UserDetails">
 																	<ul>
-																		<li>Address: 123 ABC Street</li>
-																		<li>Province: South Sumatra</li>
-																		<li>Regency: Palembang City</li>
-																		<li>Sub-District: Wheat</li>
-																		<li>Ward: Tegal</li>
+																		<li>Address: {{ demogs?.Alamat }}</li>
+																		<li>Province: {{ demogs?.Prop}}</li>
+																		<li>Regency:  {{ demogs?.Kab }}</li>
+																		<li>Sub-District:  {{demogs?.Kel }}</li>
+																		<li>Ward:  {{ demogs?.Kec }}</li>
 																	</ul>
 																</div>
 															</div>
@@ -199,7 +204,7 @@
 											</div>
 
                                             <div class="col-12 text-center mt-5">
-												<button class="btn btn-submit px-4">Search</button>
+												<button class="btn btn-submit px-4" (click)="onNIKSearch(activeTab)">Search</button>
 											</div>
 
 											<table class="w-100 text-center table_NIK_list table mt-3 table-striped"> 
