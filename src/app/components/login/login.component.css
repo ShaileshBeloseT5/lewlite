@@ -1,88 +1,63 @@
-    body.login{
-    /*	background-image: linear-gradient(111.26deg, #c9ead9 98.85%, #c6e6e4 188.33%, #d2d1e2 200%);*/
-    background-image: url('../../../assets/images/background-img.PNG');
+.body {
+    background-image: url(../../../assets/images/login_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    }
-    .h-100vh{
-        height: 100%;
-    }
-
-    .home-top-background{
-        background: linear-gradient(132.97deg, #ffffffeb 39.74%, #cbcbcbf0 77.17%);
-    }
-    /*.home-mid-background{
-        background: linear-gradient(180deg, #c9ead9 6.18%, rgba(255, 218, 225, 0.75) 47.03%, #c9ead9 83.14%);
-    }*/
-    
-    
-    .form-outer {
-        width: 400px;
-        margin: auto;
-        background-color: #ffffff;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 12px 12px 33px #00000033;
-    }
-    .form-outer input{
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid gray;
-        border-radius: 0;
-        padding: 8px 4px;
-        margin-bottom: 10px;
-    }
-    .btn-login{
-        position: relative;
-        background-color: #d21d08;
-        color: white;
-        text-transform: uppercase;
-        font-size: 17px;
-        border: 2px solid #272db2;
-        border-radius: 0;
-        width: 100%;
-    }
-    .btn-login:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 20px solid #272db2;
-        border-bottom: 25px solid transparent;
-        transform: rotate(90deg);
-        top: -3px;
-        right: 2px;
-    }
-    .btn-login:hover{
-            background-color: #b12919;
-        color: white;	
-    }
-    .form-outer .btn-link{
-        text-decoration: none;
-        color: #0c6070;
-    }
-    .dropdown-language{
-        font-size: 19px;
-        border: 1px solid black;
-        border-radius: 22px;
-        padding: 5px 10px;
-        text-decoration: none;
-        color: black;
-        background: transparent;
-        margin: 0 5px;
-    }
-    .dropdown-language:hover{
-        cursor: pointer;
-        background-color: white;
-        border-color: white;
-    }
-    .dropdown-menu {
-        box-shadow: 3px 6px 22px #80808063;
-        border: none;
-    }
-   
-
-    @media only screen and (max-width: 768px) {
-        .form-outer {
-            width: 100%;
-        }
-    }
+}
+.form {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 60px;
+    border-radius: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.43);
+    transition: 0.4s;
+}
+.form:hover {
+    box-shadow: 0px 0px 36px aqua;
+}
+.BTN_login {
+    text-align: center;
+    margin-top: 20px;
+}
+.btn {
+    border: 1px solid white;
+    width: 200px;
+    color: white;
+    transition: 0.4s;
+    font-weight: 700;
+}
+.btn:hover {
+    color: black;
+    background-color: white;
+    border-radius: 16px;
+    width: 150px;
+    box-shadow: 0px 0px 20px aqua;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+}
+.login_header {
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.input_control {
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    color: white;
+}
+.input_control:focus {
+    border-bottom: 1px solid aqua;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 13px;
+    transition: 0.4s;
+}
