@@ -1,51 +1,57 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #0d2136;
   }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+
   .logo {
     display: flex;
-    align-items: center;
   }
-  
+  h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: white;
+  }
   .logo img {
     width: 70px;
     height: 60px;
-    border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 7px;
   }
+
+  .nav-link {
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 16px;
+  }
+  .nav-link:hover {
+    color:  #d21d08;
+    transform: scaleY(1.1);
+    border-bottom: 3px blue solid;
+  }
+  .navbar-nav{
+    font-weight: 700;
+  }
+
+  .lite {
+    font-size: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 13px;
+    background-color: gray;
+    font-family: cursive;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav-link:hover {
+      color:  #d21d08;
+      border-bottom: none;
+    }
+    .nav-link {
+      font-size: medium;
+    }
+  }
+
   
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    border: 1px solid #fff; /* Add border */
-    border-radius: 5px; /* Add rounded corners */
-    padding: 8px 16px;
-    transition: background-color 0.3s ease; /* Add smooth transition */
-  }
-  
-  nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
+
   

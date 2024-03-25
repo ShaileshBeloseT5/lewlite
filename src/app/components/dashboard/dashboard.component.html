@@ -8,19 +8,27 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="Login Image">
-      <h1>LEWLite</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a routerLink="/identity-search">Identity Search</a></li>
-        <li><a routerLink="/finger-search">Finger Search</a></li>
-        <li><a routerLink="/ak23">AK23</a></li>
-        <li><a routerLink="/user-management">User Management</a></li>
-        <li><a routerLink="/reports">Reports</a></li>
-        <li><a href="#/login">Logout</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="Login Image">
+            <h3>LEW<span class="lite">Lite</span></h3>
+          </div>
+        </div>
+          <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+             <span class="navbar-toggler-icon"></span>
+          </button>          
+          <div class="navbar-collapse collapse justify-content-end" id="menu">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" routerLink="/identity-search">Identity Search</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/finger-search">Finger Search</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/user-management">User Management</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/reports">Report</a></li>
+                <li class="nav-item"><a class="nav-link" href="#/login">Logout</a></li>
+             </ul>
+          </div>
+      </div>
     </nav>
   </header>
   <main>
