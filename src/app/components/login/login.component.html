@@ -3,15 +3,15 @@
 		<div class="form">
 			<div class="text-center login_header fs-1">LOGIN</div>
 			<div class="mt-3">
-				<input type="text" class="form-control input_control" required> 
+				<input type="text" class="form-control input_control" [(ngModel)]="loginObj.Username" name="Username" required="true"> 
 				<label for="" class="form-label">User Name</label>
 			</div>
 			<div class="mt-3">
-				<input type="password" class="form-control input_control" required> 
+				<input type="password" class="form-control input_control" [(ngModel)]="loginObj.Password" name="Password" required="true"> 
 				<label for="" class="form-label">Password</label>
 			</div>
 			<div class="BTN_login">
-				<button type="submit" class="btn">Login</button>
+				<button type="submit" class="btn" (click)="onLogin()">Login</button>
 			</div>
 		</div>
 	</div>

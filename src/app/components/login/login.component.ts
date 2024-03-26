@@ -22,14 +22,11 @@ export class LoginComponent {
     debugger;    
      this.loginService.login(this.loginObj).subscribe({
       next: (res: any) => {
-        console.log('Response:', res);
+        console.log('Response:', res);        
         if (res.response === 'true') {
         
           localStorage.setItem('userName', res.UserDetailsList[0].Username);
           this.router.navigateByUrl('/identity-search');
-
-        } else {
-          
         }
       },
       error: (error: any) => {
