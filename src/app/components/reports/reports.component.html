@@ -1,1 +1,501 @@
-<p>reports works!</p>
+<div class="page_container">
+<div class="Wrapper_page">
+    <div class="wrapper">
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Rekaman</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Laporan</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Grafik</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="light-border box-shadow p-3 m-2 pdf-p-0">
+                <div class="row">
+                    <div class="col-md-2 no-pdf">
+                        <input type="text" class="form-control customForm-control mb-2" id="StartDate" name="StartDate" data-bind="value:startDate" readonly placeholder="Pilih Tanggal Mulai">
+                        <input type="text" class="form-control customForm-control" id="EndDate" name="EndDate" data-bind="value:endDate" readonly placeholder="Pilih Tanggal Berakhir">
+                        <div class="text-center mt-3">
+                            <div class="div-brd-dashed"></div>
+                            <input type="submit" id="bulknikid" class="btn submit-btn BTN" value="Kirim">
+                        </div>
+                    </div>
+                    <div class="col-md-10 border-left pdf-make-col-12">
+                        <div class="table-responsive" id="">
+                            <table id="myDataTable" class="table mb-0 table-hover table-striped table-response TABLE_1" style="border: 1px solid #e0e0e0;">
+                                <thead class="thead-dark" id="Listhead">
+                                    <tr>
+                                        <th>Nama Operator</th>
+                                        <!--<th>Transaction Id</th>-->
+                                        <th>Tanggal Transaksi</th>
+                                        <th>Jenis Pencarian</th>
+                                        <th>Sumber</th>
+                                        <th class="text-center">Apakah Cocok</th>
+                                        <th>Hasil</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                        <td>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+            <ul class="nav nav-pills mb-3 no-pdf" id="pills-tab1" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="pills-ektp-tab" data-toggle="pill" href="#pills-ektp" role="tab" aria-controls="pills-ektp" aria-selected="true">EKTP</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-inafis-tab" data-toggle="pill" href="#pills-inafis" role="tab" aria-controls="pills-inafis" aria-selected="false">INAFIS</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-ektp" role="tabpanel" aria-labelledby="pills-ektp-tab">
+                    <div class="px-4 py-2 pdf-p-nono">
+                        <div class="row">
+                            <div class="col-md-12 pdf-p-0" id="respons_data">
+                                <div class="light-box box-shadow p-2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="finger-title">EKTP</div>
+                                            <div class="table-responsive">
+                                                <table class="table-finger">
+                                                    <tbody>
+                                                        <tr id="mainfacesmall">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="face-main-outer" id="mainface">
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="p-3 dataTables_wrapper-overflow table-responsive border-box bg-white" id="dataTablediv">
+                                                <h5 class="text-thead font-weight-bold mb-3"> EKTP Details </h5>
+                                                <table id="dataTable" class="table mb-0 table-hover table-striped table-response">
+                                                    <tr style="display:none" id="fng_Rank_name">
+                                                        <td>Rank</td>
+                                                        <td id="fng_Rank"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_SCO_name">
+                                                        <td>Score</td>
+                                                        <td id="fng_SCO"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_NIK_name">
+                                                        <td>NIK</td>
+                                                        <td id="fng_NIK"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_NAME_name">
+                                                        <td>Nama</td>
+                                                        <td id="fng_NAME"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_ADD_name">
+                                                        <td>Alamat</td>
+                                                        <td id="fng_ADD"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_BP_name">
+                                                        <td>Tempat Lahir</td>
+                                                        <td id="fng_BP"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_BG_name">
+                                                        <td>Gol Darah</td>
+                                                        <td id="fng_BG"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_DOB_name">
+                                                        <td>Tanggal Lahir</td>
+                                                        <td id="fng_DOB"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_GEN_name">
+                                                        <td>Jenis Kelamin</td>
+                                                        <td id="fng_GEN"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_JOB_name">
+                                                        <td>Pekerjaan</td>
+                                                        <td id="fng_JOB"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_KEC_name">
+                                                        <td>Kecamatan</td>
+                                                        <td id="fng_KEC"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_KEL_name">
+                                                        <td>Kelurahan</td>
+                                                        <td id="fng_KEL"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_MS_name">
+                                                        <td>STATUS Pernikahan</td>
+                                                        <td id="fng_MS"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_REG_name">
+                                                        <td>Agama</td>
+                                                        <td id="fng_REG"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_PROP_name">
+                                                        <td>Propinsi</td>
+                                                        <td id="fng_PROP"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_RT_name">
+                                                        <td>RT</td>
+                                                        <td id="fng_RT"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_RW_name">
+                                                        <td>RW</td>
+                                                        <td id="fng_RW"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_NO_kk_name">
+                                                        <td>NO_KK</td>
+                                                        <td id="fng_NO_kk"></td>
+                                                    </tr>
+        
+                                                    <tr style="display:none" id="fng_cust_val_name">
+                                                        <td>Other Info</td>
+                                                        <td id="fng_cust_val"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="fingershow">
+                                        <div class="col-md-6">
+                                            <div class="finger-title">Tangan Kiri</div>
+                                            <table class="table table-finger">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Jempol kiri</th>
+                                                        <th>Telunjuk Kiri</th>
+                                                        <th>Tengah kiri</th>
+                                                        <th>Manis kiri</th>
+                                                        <th>Kelingking kiri</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHT">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHI">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHR">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHM">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHL">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="finger-title">Tangan Kanan</div>
+                                            <table class="table table-finger">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Jempol kanan</th>
+                                                        <th>Telunjuk kanan</th>
+                                                        <th>Tengah kanan</th>
+                                                        <th>Manis kanan</th>
+                                                        <th>Kelingking kanan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHT">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHI">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHR">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHM">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHL">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-inafis" role="tabpanel" aria-labelledby="pills-inafis-tab">
+                    <div class="px-4 py-2 pdf-p-nono">
+                        <div class="row">
+                            <div class="col-md-12" id="respons_data1">
+                                <div class="light-box box-shadow p-2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="finger-title">INAFIS</div>
+                                            <div class="table-responsive">
+                                                <table class="table-finger">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="face-in-image1" id="mainfacesmall1">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="face-main-outer" id="mainface1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="p-3 dataTables_wrapper-overflow table-responsive border-box bg-white" id="dataTablediv">
+                                                <h5 class="text-thead font-weight-bold mb-3"> INAFIS Details </h5>
+                                                <table id="dataTable" class="table mb-0 table-hover table-striped table-response">
+                                                    <tr id="fng_Rank_name1">
+                                                        <td>Rank</td>
+                                                        <td id="fng_Rank1"></td>
+                                                    </tr>
+                                                    <tr id="fng_sco_name1">
+                                                        <td>Score</td>
+                                                        <td id="fng_sco1"></td>
+                                                    </tr>
+                                                    <tr id="fng_nik_name1">
+                                                        <td>NIK</td>
+                                                        <td id="fng_nik1"></td>
+                                                    </tr>
+                                                    <tr id="fng_name_name1">
+                                                        <td>Nama</td>
+                                                        <td id="fng_name1"></td>
+                                                    </tr>
+                                                    <tr id="fng_add_name1">
+                                                        <td>Alamat</td>
+                                                        <td id="fng_add1"></td>
+                                                    </tr>
+                                                    <tr id="fng_bp_name1">
+                                                        <td>Tempat Lahir</td>
+                                                        <td id="fng_bp1"></td>
+                                                    </tr>
+                                                    <tr id="fng_bg_name1">
+                                                        <td>Gol Darah</td>
+                                                        <td id="fng_bg1"></td>
+                                                    </tr>
+                                                    <tr id="fng_dob_name1">
+                                                        <td>Tanggal Lahir</td>
+                                                        <td id="fng_dob1"></td>
+                                                    </tr>
+                                                    <tr id="fng_gen_name1">
+                                                        <td>Jenis Kelamin</td>
+                                                        <td id="fng_gen1"></td>
+                                                    </tr>
+                                                    <tr id="fng_job_name1">
+                                                        <td>Pekerjaan</td>
+                                                        <td id="fng_job1"></td>
+                                                    </tr>
+                                                    <tr id="fng_kec_name1">
+                                                        <td>Kecamatan</td>
+                                                        <td id="fng_kec1"></td>
+                                                    </tr>
+                                                    <tr id="fng_kel_name1">
+                                                        <td>Kelurahan</td>
+                                                        <td id="fng_kel1"></td>
+                                                    </tr>
+                                                    <tr id="fng_ms_name1">
+                                                        <td>STATUS Pernikahan</td>
+                                                        <td id="fng_ms1"></td>
+                                                    </tr>
+                                                    <tr id="fng_reg_name1">
+                                                        <td>Agama</td>
+                                                        <td id="fng_reg1"></td>
+                                                    </tr>
+                                                    <tr id="fng_prop_name1">
+                                                        <td>Propinsi</td>
+                                                        <td id="fng_prop1"></td>
+                                                    </tr>
+                                                    <tr id="fng_rt_name1">
+                                                        <td>RT</td>
+                                                        <td id="fng_rt1"></td>
+                                                    </tr>
+                                                    <tr id="fng_rw_name1">
+                                                        <td>RW</td>
+                                                        <td id="fng_rw1"></td>
+                                                    </tr>
+                                                    <tr style="display:none" id="fng_no_kk_name1">
+                                                        <td>NO_KK</td>
+                                                        <td id="fng_no_kk1"></td>
+                                                    </tr>
+        
+                                                    <tr style="display:none" id="fng_cust_val_name1">
+                                                        <td>Other Info</td>
+                                                        <td id="fng_cust_val1"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" id="fingershow1">
+                                        <div class="col-md-6">
+                                            <div class="finger-title">Tangan Kiri</div>
+                                            <table class="table table-finger">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Jempol kiri</th>
+                                                        <th>Telunjuk Kiri</th>
+                                                        <th>Tengah kiri</th>
+                                                        <th>Manis kiri</th>
+                                                        <th>Kelingking kiri</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHT1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHI1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHR1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHM1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="LHL1">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="finger-title">Tangan Kanan</div>
+                                            <table class="table table-finger">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Jempol kanan</th>
+                                                        <th>Telunjuk kanan</th>
+                                                        <th>Tengah kanan</th>
+                                                        <th>Manis kanan</th>
+                                                        <th>Kelingking kanan</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHT1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHI1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHR1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHM1">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="finger-in-image" id="RHL1">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chart-background p-2 light-border box-shadow" style="min-height:320px;">
+                        <div class="dataTables_wrapper table-responsive dataTables_wrapper-overflow">
+                            <div id="chartIsMatchedCount" style="height:250px;width:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="chart-background p-2 light-border box-shadow" style="min-height:320px;">
+                        <div class="dataTables_wrapper table-responsive dataTables_wrapper-overflow">
+                            <div id="chartSourceCount" style="height:300px;width:100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="chart-background p-2 light-border box-shadow mt-3">
+                        <div class="dataTables_wrapper table-responsive dataTables_wrapper-overflow">
+                            <div id="UserNameCount" class="pdf-userNameCount" style="width:80%; height: 500px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

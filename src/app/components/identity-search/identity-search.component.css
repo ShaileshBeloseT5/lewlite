@@ -1,305 +1,73 @@
-.form-title{
-    background: #f0f0f0;
-    padding: 6px;
+.body {
+    background-image: url(../../../assets/images/biometric-technology-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.62);
+}
+.form-title {
+    border: 1px solid white;
+    color: black;
+    padding: 23px;
     border-radius: 3px;
-    color: gray;
-    }
-    .inside-title{
-        font-weight: bold;
-    }
-    nav.navbar li.nav-item {
-    font-weight: bold;
-    font-size: 14px;
-    }
-    .prj-name{
-    font-size: 37px;
-    font-family: fantasy;
-    font-weight: bold;
-    color: #f00307;
-    letter-spacing: 2px;
-    }
-    .ver-name{
-    background: #747474;
+    background-color: #fff;
+    font-weight: 800;
+}
+.person_ID {
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(300px);
     color: white;
-    padding: 1px 11px;
-    border-radius: 22px;
-    font-size: 12px;
-    display: inline-block;
-    margin-top: 13px;
-    }
-    .btn-brd{
-    border: solid 2px #c7e8de;
-    background-color: #ffffff;
-    border-radius: 22px;
-    color: #606060;
-    padding: 6px 15px;
-    }
-    .brd-l{
-    border-left: solid 0.2rem #c7e8de;
-    }
-    .e-mid-background{
-    background-image: linear-gradient(168deg, rgba(255, 218, 225, 0.75) 47.03%, #c9ead9 83.14%);
-    }
-    .btn-submit{
-    background-color: #ffffff;
-    color: #606060;
-    }
-    .btn-white:hover{
-    opacity: .8;
-    }
-    .nav-pills .nav-link{
-    padding: 9px 22px;	
-    border: solid 0.3rem #efefef;
-    font-weight: bold;
-    color: #606060;
-    min-width: 230px;
-    }
-    .nav-pills .nav-item:nth-child(1) .nav-link{
-    border-radius: 0.7rem 0 0 0.7rem;
-    }
-    .nav-pills .nav-item:nth-child(2) .nav-link{
-    border-radius: 0 0.7rem 0.7rem 0;
-    }
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-        background-color: #d21d08;
-    color: #ffffff;
-    border: solid 0.3rem #efefef;
-    border-style: double;
-    }
-    
-    .form-content {
-    margin: auto;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 12px 12px 33px #00000033;
-    }
-    
-    
-    .form-outer {
-    width: 400px;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 12px 12px 33px #00000033;
-    }
-    .form-outer input{
+    border-radius: 20px;
+    box-shadow: 0px 2px 18px 2px rgba(0, 0, 0, 0.37);
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover {
+    color: aqua;
+}
+
+.col-form-label {
+    color: white;
+}
+.input_control {
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid gray;
-    border-radius: 0;
-    padding: 8px 4px;
-    margin-bottom: 10px;
-    }
-    .btn-login{
-    position: relative;
-    background-color: #d21d08;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
     color: white;
-    text-transform: uppercase;
-    font-size: 17px;
-    border: 2px solid #272db2;
-    border-radius: 0;
-    width: 100%;
-    }
-    .btn-login:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #272db2;
-    border-bottom: 25px solid transparent;
-    transform: rotate(90deg);
-    top: -3px;
-    right: 2px;
-    }
-    .btn-login:hover{
-        background-color: #b12919;
-    color: white;	
-    }
-    .form-outer .btn-link{
-    text-decoration: none;
-    color: #0c6070;
-    }
-    .dropdown-language{
-    font-size: 19px;
-    border: 1px solid black;
-    border-radius: 22px;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: black;
-    background: transparent;
-    margin: 0 5px;
-    }
-    .dropdown-language:hover{
-    cursor: pointer;
+}
+.input_control:focus {
+    border-bottom: 1px solid aqua;
+}
+.btn_search {
+    color: white;
+    border: 1px solid white;
+    width: 150px;
+    transition: 0.3s;
+}
+.btn_search:hover {
     background-color: white;
-    border-color: white;
-    }
-    .dropdown-menu {
-    box-shadow: 3px 6px 22px #80808063;
-    border: none;
-    }
-    .btn-submit{
-    position: relative;
-    background-color: #d21d08;
-    color: white;
-    text-transform: uppercase;
-    font-size: 17px;
-    border: 2px solid #272db2;
-    border-radius: 0;
-    }
-    .btn-submit:after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 20px solid #272db2;
-    border-bottom: 25px solid transparent;
-    transform: rotate(90deg);
-    top: -2px;
-    right: 2px;
-    }
-    .btn-clear{
-    background-image: linear-gradient(181deg, #e5e5e5, #cfcfcf);
+    box-shadow: 0px 0px 20px aqua;
     color: black;
-    text-transform: uppercase;
-    border: 0;
-    border-radius: 22px;
-    padding: 8px 19px;
-    }
-    /*.btn-submit:hover{
-    
-    }
-    .btn-clear:hover{
-    
-    }
-    .box-shadow{
-    
-    }*/
-    .border-outer{
-    border: 1px solid lightgray;
-    border-radius: 5px;
+    border-radius: 15px;
+}
+.btn_search:active {
+    background-color: black;
+    color: #fff;
+}
+.nav-link.active {
     background-color: white;
-    }
-    .class-trash{
-    width: 25px;
-    display: inline-block;
-    text-align: center;
-    color: #eb3535;
-    }
-    .class-eye{
-    width: 25px;
-    display: inline-block;
-    text-align: center;
-    }
-    .mandatory {
-    color: #dd1b1b;
-    }
-    label.col-form-label{
-    font-weight: bold;
-    font-size: 13px;
-    }
-    input.form-control {
-    border-bottom: 1px solid lightgray;
-    margin-bottom: 14px;
-    padding: 12px 4px 6px 12px;
-    }
-    select.form-select {
-        border-bottom: 1px solid lightgray;
-    margin-bottom: 14px;
-    padding: 12px 4px 6px 12px;
-    }
-    .table-outer th {
-    background-color: #000000;
-    color: white;
-    padding: 12px 9px;
-    vertical-align: middle;
-    }
-    table.dataTable {
-    border: 1px solid lightgray;
-    }
-    .active>.page-link, .page-link.active {
-    background-color: #43b6cf;
-    border-color: #3d9baf;
-    }
-    th.no-sorting{
-    padding: 9px!important;
-    }
-    .no-sorting:before{
-    content: ''!important;
-    }
-    .no-sorting:after{
-    content: ''!important;
-    }
-    .div-check-all{
-    border-radius: 22px;
-    border: 2px solid white;
-    padding: 5px 11px;
-    display: inline-block;
-    }
-    .table-outer {
-    overflow-x: auto;
-    padding: 0 15px;
-    }
-    .fa-pen-to-square{
-    color: #2a8599;
-    }
-    .fa-pen-to-square:hover{
-    opacity: .7;
-    cursor: pointer;
-    }
-    
-    .FP {
-        font-size: small;
-        font-weight: 800;
-    }
-    .FP_body {
-        background-color: wheat;
-    }
-    .Fprints span {
-      display: inline-flex;  
-    }
-    .Fprints .card-body {
-        background-color: lightgreen;
-    }
-    .Fprints .card {
-        margin-right: 20px;
-    }
-    
-    .FPname {
-        font-size: 12px;
-        font-weight: 600;
-        background-color: #b12919;
-        color: white;
-    }
-    
-    .UserImg {
-        border: 1px solid black;
-        border-radius: 6px;
-        box-shadow: 3px 5px 15px black;
-    }
-    .UID {
-        font-weight: 600;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 14px;
-    }
-    .UserDetails ul {
-        font-size: small;
-    }
-    .table_NIK_list {
-        border: 1px solid #adadad;
-    } 
-    .table_NIK_list th {
-        font-weight: 900;
-        background-color: #272db2;
-        color: white;
-    }   
-    @media only screen and (max-width: 600px) {
-        .UID {
-            font-size: 20px; 
-        }
-        .UserDetails ul {
-            font-size: medium;
-        }
-    }
+    color: black;
+    box-shadow: 0px 0px 20px aqua;
+    font-weight: 800;
+}

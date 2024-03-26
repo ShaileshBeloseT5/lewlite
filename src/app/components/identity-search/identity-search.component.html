@@ -1,323 +1,155 @@
-<div class="container py-2">    
-            <div class="row align-items-center my-2">
-                <div class="col-12">
-                    <div class="media-mt-5">
-                        <div class="form-content">
-                            <div class="form-title">
-								Identity Search / <span class="inside-title">Search By NIK</span>
-							</div>
-                            <div class="mt-5 mb-2">
-                                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
-									<li class="nav-item" role="presentation">
-										<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search By NIK</button>
-									</li>
-									<li class="nav-item" role="presentation">
-										<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Search By Name</button>
-									</li>
-								</ul>
+<div class="body">
+<div class="container">
+	<div class="row">
+		<div class="col-12 mt-5">
+			<div class="form-content">
+				<div class="form-title">
+					Identity Search / <span class="inside-title">Search By NIK</span>
+				</div>
+				<div class="mt-5 mb-2">
+					<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search By NIK</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Search By Name</button>
+						</li>
+					</ul>
 
-                                <div class="tab-content pt-4" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-										<div class="row">
-											<div class="col-4">
-												<label class="col-form-label">NIK Number</label>
-												<input class="form-control" type="text">
-											</div>	
-											<div class="col-12 text-center mt-2">
-												<button class="btn btn-submit px-4">Search</button>
-											</div>	
+					<div class="tab-content pt-4" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+							<div class="row">
+								<div class="col-4">
+									<label class="col-form-label">NIK Number</label>
+									<input class="form-control input_control" type="text">
+								</div>	
+								<div class="col-12 mt-2 mt-lg-4">
+									<button class="btn btn-submit px-4 btn_search">Search</button>
+								</div>	
 
-											<div class="form-content mt-3">
-												<div class="row">
-													<div class="col-lg-4 col-12">
-														<div class="card border-3 border-primary">
-															<div class="card-header text-center">
-																<img src="../../../assets/images/person-icon.png" width="140px" class="UserImg">
-															</div>
-															<div class="card-body row">
-																<div class="col-lg-6 col-12 UserDetails">
-																	<div class="UID">Name: John Doe</div>
-																	<ul>
-																		<li>Date of Birth:01/01/1976</li>
-																		<li>Maritial Status: Marrid</li>
-																		<li>Work: Freelance</li>
-																	</ul>
-																</div>
-																<div class="col-lg-6 col-12 UserDetails">
-																	<div class="UID">VIN: 1234567898766</div>
-																	<ul>
-																		<li>Gender: Male</li>
-																		<li>NoKK: 1234567898766</li>
-																	</ul>
-																</div>
-																<div class="UserDetails">
-																	<ul>
-																		<li>Address: 123 ABC Street</li>
-																		<li>Province: South Sumatra</li>
-																		<li>Regency: Palembang City</li>
-																		<li>Sub-District: Wheat</li>
-																		<li>Ward: Tegal</li>
-																	</ul>
-																</div>
-															</div>
-														</div>
+								<div class="form-content mt-3">
+										<div class="">
+											<div class="card person_ID">
+												<div class="card-header text-center">
+													<img src="../../../assets/images/person-icon.png" width="140px" class="UserImg">
+												</div>
+												<div class="card-body row">
+													<div class="col-lg-6 col-12 UserDetails">
+														<div class="UID">Name: John Doe</div>
+														<ul>
+															<li>Date of Birth:01/01/1976</li>
+															<li>Maritial Status: Marrid</li>
+															<li>Work: Freelance</li>
+														</ul>
 													</div>
-													<div class="col-lg-8 col-12 mt-lg-0 mt-3">
-														<div class="card"> 
-															<div class="card-header text-center FP bg-secondary">Right Hand</div>
-															<div class="card-body FP_body">
-																<div class="text-center Fprints">
-																	<span class="card">
-																		<span class="card-header FPname">Thumb</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Index</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Center</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Ring</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Pinky</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																</div>
-															</div>
-														</div>
-														<div class="card mt-2 mt-lg-4">
-															<div class="card-header text-center FP bg-secondary">Left Hand</div>
-															<div class="card-body FP_body">
-																<div class="text-center Fprints"> 
-																	<span class="card">
-																		<span class="card-header FPname">Thumb</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Index</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Center</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Ring</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																	<span class="card">
-																		<span class="card-header FPname">Pinky</span>
-																		<span class="card-body">
-																			<img src="../../../assets/images/fingerprint-icon.png" width="50px">
-																		</span>
-																	</span>
-																</div>
-															</div>
-														</div>
-									
-									
-														<div class="buttons mt-2 mt-lg-4 text-lg-center">
-															<button class="btn btn-danger me-lg-3 me-2" type="button">Download to Inafis</button>
-															<button class="btn btn-danger mt-lg-0 mt-2" type="button">Download Data to Local</button>
-														</div>
+													<div class="col-lg-6 col-12 UserDetails">
+														<div class="UID">VIN: 1234567898766</div>
+														<ul>
+															<li>Gender: Male</li>
+															<li>NoKK: 1234567898766</li>
+														</ul>
+													</div>
+													<div class="UserDetails">
+														<ul>
+															<li>Address: 123 ABC Street</li>
+															<li>Province: South Sumatra</li>
+															<li>Regency: Palembang City</li>
+															<li>Sub-District: Wheat</li>
+															<li>Ward: Tegal</li>
+														</ul>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-
-                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                                        <div class="row">
-                                            <div class="col-4">
-												<label class="col-form-label">Name</label>
-												<input class="form-control" type="text">
-											</div>
-                                            <div class="col-4">
-												<label class="col-form-label">Gender</label>
-												<div class="mt-2">
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-														<label class="form-check-label" for="inlineRadio1">Male</label>
+										<div class="mt-3">
+											<div class="card RT_FP"> 
+												<div class="card-header text-center FP">Right Hand</div>
+												<div class="card-body FP_body">
+													<div class="text-center Fprints">
+														<span class="card">
+															<span class="card-header FPname">Thumb</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Index</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Center</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Ring</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Pinky</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
 													</div>
-													<div class="form-check form-check-inline">
-														<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-														<label class="form-check-label" for="inlineRadio2">Female</label>
-													</div> 
 												</div>
 											</div>
-
-                                            <div class="col-4">
-												<label class="col-form-label">Father's Name</label>
-												<input class="form-control" type="text">
+											<div class="card mt-2 mt-lg-4">
+												<div class="card-header text-center FP">Left Hand</div>
+												<div class="card-body FP_body">
+													<div class="text-center Fprints"> 
+														<span class="card">
+															<span class="card-header FPname">Thumb</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Index</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Center</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Ring</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+														<span class="card">
+															<span class="card-header FPname">Pinky</span>
+															<span class="card-body">
+																<img src="../../../assets/images/fingerprint-icon.png" width="50px">
+															</span>
+														</span>
+													</div>
+												</div>
 											</div>
-											<div class="col-4">
-												<label class="col-form-label">Mother's Name</label>
-												<input class="form-control" type="text">
+						
+						
+											<div class="buttons mt-2 mt-lg-4 text-lg-center">
+												<button class="btn btn-danger me-lg-3 me-2" type="button">Download to Inafis</button>
+												<button class="btn btn-danger mt-lg-0 mt-2" type="button">Download Data to Local</button>
 											</div>
-											<div class="col-4">
-												<label class="col-form-label">Address</label>
-												<input class="form-control" type="text">
-											</div>
-											<div class="col-4">
-												<label class="col-form-label">Providence</label>
-												<input class="form-control" type="text">
-											</div>
-											<div class="col-4">
-												<label class="col-form-label">Regency</label>
-												<input class="form-control" type="text">
-											</div>
-											<div class="col-4">
-												<label class="col-form-label">Sub-District</label>
-												<input class="form-control" type="text">
-											</div>
-											<div class="col-4">
-												<label class="col-form-label">Ward</label>
-												<input class="form-control" type="text">
-											</div>
-
-                                            <div class="col-12 text-center mt-5">
-												<button class="btn btn-submit px-4">Search</button>
-											</div>
-
-											<table class="w-100 text-center table_NIK_list table mt-3 table-striped"> 
-												<thead>
-													<tr>
-														<th>NIK</th>
-														<th>Name</th>
-														<th>Address</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-									
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-													<tr>
-														<td>1234567890</td>
-														<td>Jhon Doe</td>
-														<td>abc passed road,Indonesia 763849</td>
-													</tr>
-												</tbody>
-											</table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
-	
-
-
-
-
+</div>
