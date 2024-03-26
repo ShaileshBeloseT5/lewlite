@@ -71,3 +71,58 @@
     box-shadow: 0px 0px 20px aqua;
     font-weight: 800;
 }
+
+.personal_details {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.NIK_details {
+    padding: 20px;
+}
+
+.person-img img {
+    box-shadow: 0px 0px 20px aqua;
+    border-radius: 5px;
+}
+.download_btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 16px;
+}
+.download_details {
+    border: 1px solid aqua;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.download_details:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 10px aqua;
+    border-radius: 10px;
+}
+.download_details:active {
+    background-color: black;
+    color: white;
+}
+.FP-container {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+.FP-container .form-label {
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.FP-name {
+    border: 1px solid aqua;
+    color: white;
+}
+.FP-name td {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border: 1px solid black;
+}
