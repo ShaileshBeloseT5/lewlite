@@ -9,10 +9,10 @@
 				<div class="mt-5 mb-2">
 					<ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
 						<li class="nav-item" role="presentation">
-							<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Search By NIK</button>
+							<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" (click)="onActivatedTab('NIK')">Search By NIK</button>
 						</li>
 						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Search By Name</button>
+							<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" (click)="onActivatedTab('NAME')">Search By Name</button>
 						</li>
 					</ul>
 
@@ -20,59 +20,59 @@
 						<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
 							<div class="row">
 								<div class="col-4">
-									<label class="col-form-label">NIK Number</label>
-									<input class="form-control input_control" type="text">
+									<label class="col-form-label">NIK Number: 3173054808830011</label>
+									<input class="form-control input_control" type="text" id="txtNIK" [(ngModel)]="nikNumber">
 								</div>	
 								<div class="col-12 mt-2 mt-lg-4">
-									<button class="btn btn-submit px-4 btn_search">Search</button>
+									<button class="btn btn-submit px-4 btn_search" (click)="onNIKSearch(activeTab)">Search NIK</button>
 								</div>	
 
-								<div class="form-content mt-3 mt-lg-5 NIK_details">
+								<div class="form-content mt-3 mt-lg-5 NIK_details" *ngIf="condition">
 									<div class="row border border-light p-2 p-lg-4 rounded">
 										<div class="col-12 col-lg-4 person-img mb-lg-0 mb-4">
-											<img src="../../../assets/images/person-icon.png" alt="" width="300px">
+											<img [src]="imageData" alt="Face Data" width="300px">
 										</div>
 										<div class="col-12 col-lg-8">
 											<div class="personal_details text-white row me-lg-3">
 												<div class="col-lg-6 col-12">
 													<div class="details">
-														<label for="" class="form-label">Name: <span class="ms-1">John Doe</span> </label>
+														<label for="" class="fw-3 form-label">Name: <span class="ms-1">{{ demogs?.Name }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">VIN: <span class="ms-1">1234567890</span> </label>
+														<label for="" class="form-label">NIK:<span class="ms-1"> {{ demogs?.NIK }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Gender: <span class="ms-1">Male</span> </label>
+														<label for="" class="form-label">Gender: <span class="ms-1">{{ demogs?.Gender }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">NoKK: <span class="ms-1">1234567890</span> </label>
+														<label for="" class="form-label">NoKK: <span class="ms-1">{{ demogs?.NIK }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Date of Birth: <span class="ms-1">10/05/1985</span> </label>
+														<label for="" class="form-label">Date of Birth: <span class="ms-1">{{ demogs?.DOB }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Maritial Status: <span class="ms-1">Marrid</span> </label>
+														<label for="" class="form-label">Maritial Status: <span class="ms-1">{{ demogs?.Statusperkawinan }}</span> </label>
 													</div>
 												</div>
 												
 												<div class="col-lg-6 col-12">
 													<div class="details">
-														<label for="" class="form-label">Work: <span class="ms-1">Freelance</span> </label>
+														<label for="" class="form-label">Work: <span class="ms-1">{{ demogs?.Perkawinan }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Address: <span class="ms-1">123 ABC Street</span> </label>
+														<label for="" class="form-label">Address: <span class="ms-1">{{ demogs?.Alamat }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Province: <span class="ms-1">South Sumatra</span> </label>
+														<label for="" class="form-label">Province: <span class="ms-1">{{ demogs?.Prop }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Regency: <span class="ms-1">Palembang City</span> </label>
+														<label for="" class="form-label">Regency: <span class="ms-1">{{ demogs?.Kab }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Sub-District: <span class="ms-1">Wheat</span> </label>
+														<label for="" class="form-label">Sub-District: <span class="ms-1">{{ demogs?.Kel }}</span> </label>
 													</div>
 													<div class="details">
-														<label for="" class="form-label">Ward: <span class="ms-1">Tegal</span> </label>
+														<label for="" class="form-label">Ward: <span class="ms-1">{{ demogs?.Kec }}</span> </label>
 													</div>
 												</div>
 												<div class="download_btn">

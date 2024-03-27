@@ -10,8 +10,8 @@ export class IdentificationService {
 
   constructor(private http: HttpClient) { }
 
-  getSingleNIK(nik: string): Observable<HttpResponse<any>> {
 
+  getSingleNIK(nik: string): Observable<HttpResponse<any>> {
    
     if (!this.checkIfFileExists('assets/responses/getSingleNIK.json')) {
       console.log('3');

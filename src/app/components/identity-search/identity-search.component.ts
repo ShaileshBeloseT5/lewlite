@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IdentificationService } from '../../services/identification.service';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs';
 @Component({
   selector: 'app-identity-search',
   standalone: true,
@@ -10,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './identity-search.component.css'
 })
 export class IdentitySearchComponent {
-  imageData: string = '';
+  imageData: string = 'assets/images/face.png';
   NIK: string;
   Name: string;
   DOB: string;
@@ -23,17 +25,43 @@ export class IdentitySearchComponent {
   condition: boolean = false;
 
 
-  constructor(private searchService: IdentificationService) {
+  constructor(private searchService: IdentificationService,private http: HttpClient) {
     this.activeTab = 'NIK';
     this.NIK = '';
     this.Name = '';
     this.DOB = '';
+  }
 
+  ngOnInit() {
+   
+    this.getImageBase64(this.imageData).subscribe(
+      data => {
+   //     this.imageData = data;
+      },
+      error => {
+        console.error('Error reading image file:', error);
+      }
+    );
+  }
+
+  getImageBase64(filePath: string) {
+    return this.http.get(filePath, { responseType: 'blob' })
+      .pipe(map(blob => {
+        return new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(blob);
+          reader.onloadend = () => {
+            resolve(reader.result as string);
+          };
+          reader.onerror = () => {
+            reject('Unable to read file');
+          };
+        });
+      }));
   }
 
   onActivatedTab(tabName: string) {
-    this.activeTab = tabName;
-    alert("Activating: " + this.activeTab);
+    this.activeTab = tabName;    
     console.log('Activating TAB in :', this.activeTab);
   }
 
@@ -66,43 +94,44 @@ export class IdentitySearchComponent {
     }
 
 
-//Get SINGLE NIK record if its exist ot not.
+    if (this.activeTab.match("NIK")) {
+      //Get SINGLE NIK record if its exist ot not.
+      try {
+        const resToken = this.searchService.getSingleNIK(this.nikNumber);
 
-    try {
+        if (resToken instanceof Promise) {
+          // If resToken is a Promise, await its resolution
+          this.nikResValue = await resToken;
+        } else {
+          // If resToken is an Observable, subscribe to it to get the value
+          this.nikResValue = await resToken.toPromise();
+        }
+        this.searchResult = this.nikResValue.body;
 
+        if (this.searchResult && this.searchResult.response) {
+          const responseData = this.searchResult.response;
 
-      const resToken = this.searchService.getSingleNIK(this.nikNumber);
+          this.condition = true;
+          const data = JSON.parse((responseData) as unknown as string);
+          this.demogs = data._results as _results;
 
-      if (resToken instanceof Promise) {
-        // If resToken is a Promise, await its resolution
-        this.nikResValue = await resToken;
-      } else {
-        // If resToken is an Observable, subscribe to it to get the value
-        this.nikResValue = await resToken.toPromise();
+          const base64ImageString = this.demogs.Face_data;
+          this.imageData = `data:image/png;base64,${base64ImageString}`;
+
+        } else {
+          console.error('Response data is undefined or null');
+        }
+
+      } catch (error) {
+        console.error('Error:', error);
       }
-
-      this.searchResult = this.nikResValue.body;
-
-
-      if (this.searchResult && this.searchResult.response) {
-        const responseData = this.searchResult.response;
-
-        this.condition = true;
-        const data = JSON.parse((responseData) as unknown as string);
-        this.demogs = data._results as _results;
-
-        const base64ImageString = this.demogs.Face_data;
-        this.imageData = `data:image/png;base64,${base64ImageString}`;
-
-      } else {
-        console.error('Response data is undefined or null');
-      }
-
-
-
-    } catch (error) {
-      console.error('Error:', error);
     }
+    else if(this.activeTab.match("NAME"))
+    {
+      
+    }
+
+
 
 
 
@@ -121,6 +150,8 @@ export class SingleNIKRequest {
     this.NIK = nik;
   }
 }
+
+
 
 export interface SearchResult {
   Status: string;
@@ -172,3 +203,18 @@ export interface _results {
   Error: string | null;
 }
 
+export class MultiNIKRequest{
+  constructor(private identitySearchService: IdentificationService) { }
+
+  searchBulkNIK(): void {
+
+    // You should replace these values with the actual data you want to send
+   
+    
+  }
+
+}
+
+export interface MultiNIKResponse{
+  
+}
