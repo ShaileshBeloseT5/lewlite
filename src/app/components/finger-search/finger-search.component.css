@@ -1,27 +1,81 @@
-.FPsearch_inputs input {
-    border: 1px solid gray;
-    margin-bottom: 6px;
+.body {
+    background-image: url(../../../assets/images/biometric-technology-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
-.FP {
-    font-size: small;
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(13px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.62);
+    min-height: 100vh;
+}
+.header {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 5px;
     font-weight: 800;
 }
-.FP_body {
-    background-color: wheat;
-}
-.Fprints span {
-  display: inline-flex;  
-}
-.Fprints .card-body {
-    background-color: lightgreen;
-}
-.Fprints .card {
-    margin-right: 20px;
-}
-
-.FPname {
-    font-size: 12px;
+.col-form-label {
     font-weight: 600;
-    background-color: #b12919;
+}
+.FP_search {
+    border: 1px solid white;
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+.search_BTN {
+    border: 1px solid white;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+    width: 150px;
+}
+.search_BTN:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 15px aqua;
+    border-radius: 13px;
+}
+.search_BTN:active {
     color: white;
+    background-color: black;
+}
+.custom-input {
+    background-color: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid white;
+    border-radius: 3px;
+    color: aqua;
+}
+.custom-input:hover {
+    border-bottom: 1px solid aqua;
+}
+.FP {
+    margin: 10px;
+}
+.FP-container {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+.FP-name {
+    border: 1px solid aqua;
+    color: white;
+}
+.FP-name td {
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 10px;
+    border: 1px solid black;
 }

@@ -13,7 +13,7 @@ export class IdentificationService {
 
   getSingleNIK(nik: string): Observable<HttpResponse<any>> {
    
-    if (!this.checkIfFileExists('assets/responses/getSingleNIK.json')) {
+    if (this.checkIfFileExists('assets/responses/getSingleNIK.json')) {
       console.log('3');
       return this.http.get<HttpResponse<any>>('assets/responses/getSingleNIK.json', { observe: 'response' })
     } else {
